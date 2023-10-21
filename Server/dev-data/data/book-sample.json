@@ -1,0 +1,28 @@
+[
+  {
+    "id": 0,
+    "name": "Harry Potter and the Half-Blood Prince",
+    "author": "JK Rowling",
+    "quote": "Let us step into the night and pursue that flighty temptress, adventure",
+    "price": 1000,
+    "priceDiscount": 200,
+    "description": "Harry Potter and the Half-Blood Prince is a fantasy novel written by British author J. K. Rowling and the sixth and penultimate novel in the Harry Potter series. Set during Harry Potter's sixth year at Hogwarts, the novel explores the past of the boy wizard's nemesis, Lord Voldemort, and Harry's preparations for the final battle against Voldemort alongside his headmaster and mentor Albus Dumbledore.",
+    "editors": "JK Rowling(author), Christopher Reath, Alena Gestoborn, Steve Korg",
+    "language": "Standard English(USA & UK)",
+    "paperback": "paper texture, full colour, 345 pages, ISBN:1234 5678 889",
+    "image": "book-1-1.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Fire and Blood - A Game of Thrones Series",
+    "author": "George R.R. Martin",
+    "quote": "Then the storm broke, and the dragons danced.",
+    "price": 1200,
+    "priceDiscount": 100,
+    "description": "'Fire and Blood' is a fictional history book by George R.R. Martin, exploring the Targaryen dynasty's rule over Westeros. Filled with dragons, political intrigue, and dynastic struggles, it provides a rich backdrop to the events in the 'A Song of Ice and Fire' series, shedding light on the rise and fall of House Targaryen and the history of the Seven Kingdoms.",
+    "editors": "George R.R. Martin(author)",
+    "language": "Standard English(USA & UK)",
+    "paperback": "paper texture, full colour, 345 pages, ISBN:1234 5678 889",
+    "image": "book-2-1.jpg"
+  }
+]
