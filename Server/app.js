@@ -1,18 +1,37 @@
-const express = require('express');
-const morgan = require('morgan');
+const express = require("express");
+const cors = require("cors");
+const userModel = require("./Model/userModel");
+
 const app = express();
-const bookRouter = require('./routes/bookRoutes');
-const userRouter = require('./routes/userRoutes');
-
-////////////// MIDDLEWARE ////////////////////////////////////
 app.use(express.json());
+app.use(cors());
 
-app.use(morgan('dev'));
+app.get("/test", (req, res) => {
+  res.json("Testing");
+});
 
-// const userRoute = require('./routes/userRoutes');
-
-////////// ROUTES ///////////////////////////////////////
-app.use('/api/v1/books', bookRouter);
-app.use('/api/v1/users', userRouter);
+app.post("/signup", (req, res) => {
+  userModel
+    .create(req.body)
+    .then((user) => res.json(user))
+    .catch((e) => res.json(e));
+});
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+  userModel
+    .findOne({ email: email })
+    .then((user) => {
+      if (user) {
+        if (user.password === password) {
+          res.json("success");
+        } else {
+          res.json("password is incorrect");
+        }
+      } else {
+        res.json("User does not exist");
+      }
+    })
+    .catch((e) => console.log(e));
+});
 
 module.exports = app;
